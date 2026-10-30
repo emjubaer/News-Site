@@ -1,6 +1,7 @@
 
 import MainNews from "./components/MainNews";
 import Marquee from "./components/Marquee";
+import MostRead from "./components/MostRead";
 import NewsCard from "./components/NewsCard";
 import { INewsArticle } from "./types/latestNews";
 import { ISection } from "./types/NewsSection";
@@ -80,19 +81,36 @@ export default async function Home() {
 
           {/* Most Read Section */}
           <aside className="min-w-0 lg:col-span-4">
-            <div className="sticky top-28 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
+            <div className="sticky top-28 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
 
-              <div className="mb-4 flex items-center gap-3 border-b border-gray-100 pb-3">
-                <span className="h-7 w-1 rounded-full bg-red-600" />
+              {/* Header */}
+              <div className="border-b border-gray-100 px-4 py-4 sm:px-5">
+                <div className="flex items-center justify-between gap-3">
 
-                <h2 className="text-xl font-extrabold tracking-tight text-gray-900">
-                  Most Read News
-                </h2>
+                  <div className="flex items-center gap-3">
+                    <span className="h-7 w-1 rounded-full bg-red-600" />
+
+                    <h2 className="text-lg font-extrabold tracking-tight text-gray-900 sm:text-xl">
+                      সর্বাধিক পঠিত সংবাদ
+                    </h2>
+                    
+                  </div>
+                </div>
+
+                <p className="mt-2 pl-4 text-xs font-medium text-gray-400">
+                  পাঠকদের সবচেয়ে বেশি পড়া সংবাদ
+                </p>
               </div>
 
-              <div className="py-6 text-center">
-                <p className="text-sm font-medium text-gray-400">
-                  Most read news will appear here.
+              {/* News List */}
+              <div className="px-4 py-2 sm:px-5">
+                <MostRead />
+              </div>
+
+              {/* Footer */}
+              <div className="border-t border-gray-100 bg-gray-50/70 px-5 py-3">
+                <p className="text-center text-xs font-medium text-gray-400">
+                  Bangla News 24 · সর্বাধিক পঠিত
                 </p>
               </div>
 

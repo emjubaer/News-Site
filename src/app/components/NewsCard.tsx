@@ -2,7 +2,7 @@ import Image from "next/image";
 import { INewsArticle } from "../types/latestNews";
 
 const NewsCard = ({news}: {news: INewsArticle}) => {
-    console.log("testnews", news);
+  
     return (
         <div className="card bg-base-100 shadow-sm">
             <figure>
